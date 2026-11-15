@@ -23,5 +23,5 @@ Add an object to `industries` in `site.config.json` (copy an existing one). It g
 - [ ] Every stat still links to a page that loads.
 - [ ] `signupUrl` opens the current Tally onboarding form.
 
-## Hosting (Cloudflare Pages)
-Build command `node build.mjs`, output directory `dist`, production branch `main`.
+## Hosting (Cloudflare Workers, static assets)
+Build command `node build.mjs`, deploy command `npx wrangler deploy`. `wrangler.jsonc` tells Cloudflare to serve `dist`. Pushing to `main` redeploys.
