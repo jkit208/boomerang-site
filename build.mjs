@@ -219,6 +219,17 @@ function proof() {
 </div></section>`;
 }
 
+
+function tryIt() {
+  const d = C.demoLine; if (!d) return '';
+  return `<section class="alt" id="try"><div class="wrap center">
+  <span class="eyebrow">Try it yourself</span><h2>Text Sara right now</h2>
+  <p class="lead">Text <b>${d.display}</b> and pretend you’re a homeowner. Sara answers for our demo company, ${esc(d.business)}. Ask about a tree, give an address, ask what it costs, try to stump her.</p>
+  <div class="btn-row" style="justify-content:center"><a class="btn btn-primary" href="sms:${d.e164}?&body=${encodeURIComponent(d.prefill)}">Text ${d.display}</a></div>
+  <p class="fine" style="margin-top:14px">It’s a live demo line, so you’ll get real texts back. Reply STOP any time.</p>
+</div></section>`;
+}
+
 const industries = () => `<div class="ind-grid">${C.industries.map((i) => `<a href="/industries/${i.slug}/">${esc(i.name)}</a>`).join('')}</div>`;
 
 // ---------- HOME ----------
@@ -234,10 +245,11 @@ page('/', {
     <h1>You can’t answer every call. <em>Sara can.</em></h1>
     <p class="lead">Boomerang texts back every call you miss in seconds, asks the questions you would ask, and books the estimate on your calendar while you’re still on the job.</p>
     ${ctaBtns()}
-    <ul class="hero-points"><li>Keep your number. Only missed calls come to us.</li><li>You decide how much Sara books on her own.</li><li>Done-for-you setup, including carrier texting registration.</li></ul>
+    <ul class="hero-points">${C.demoLine ? `<li>Try it now: text <a href="#try" style="color:#fff">${C.demoLine.display}</a></li>` : ''}<li>Keep your number. Only missed calls come to us.</li><li>You decide how much Sara books on her own.</li><li>Done-for-you setup, including carrier texting registration.</li></ul>
   </div>
   ${player(tree)}
 </div></section>
+${tryIt()}
 ${statsSection(['voicemail', 'abandon', 'fivemin'])}
 <section class="dark" id="how"><div class="wrap">
   <span class="eyebrow">How it works</span><h2>From missed call to booked estimate, without you touching your phone</h2>
@@ -364,6 +376,7 @@ for (const ind of C.industries) {
     ${ctaBtns()}</div>
   ${player(ind)}
 </div></section>
+${tryIt()}
 <section><div class="wrap" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:48px;align-items:start">
   <div><span class="eyebrow">The problem</span><h2>Your phone rings when your hands are full</h2><p class="lead">${esc(ind.pain)}</p></div>
   <div><span class="eyebrow">What Sara asks</span><h2>The questions you would ask</h2>

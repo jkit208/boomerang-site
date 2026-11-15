@@ -3,10 +3,15 @@
   "siteUrl": "https://useboomerang.ai",
   "brand": "Boomerang",
   "company": "Lhotse Automations LLC",
-  "contactEmail": "jason@getlhotse.com",
+  "contactEmail": "info@getlhotse.com",
   "signupUrl": "https://tally.so/r/9NXvxX",
   "appUrl": "https://app.useboomerang.ai",
-  "demoLine": null,
+  "demoLine": {
+    "e164": "+12083144471",
+    "display": "(208) 314-4471",
+    "business": "Arbor View Tree Care",
+    "prefill": "Hi, I need a quote to remove a tree"
+  },
   "pricing": {
     "currency": "USD",
     "setupFee": 99,
@@ -53,11 +58,20 @@
     ]
   },
   "proof": {
-    "label": "Running on our own lawn care business, The Sod Squad, in its first year",
+    "label": "Running on our own one-truck lawn care business, The Sod Squad, since September 2025. Our own test calls are excluded.",
     "items": [
-      { "value": "114", "label": "missed calls handled automatically" },
-      { "value": "231", "label": "customer conversations kept organized" },
-      { "value": "44", "label": "appointments booked" }
+      {
+        "value": "138",
+        "label": "missed calls texted back automatically"
+      },
+      {
+        "value": "215",
+        "label": "customer conversations handled"
+      },
+      {
+        "value": "14",
+        "label": "appointments booked"
+      }
     ]
   },
   "stats": [
@@ -102,7 +116,12 @@
       "url": "https://hbr.org/2011/03/the-short-life-of-online-sales-leads"
     }
   ],
-  "calculatorDefaults": { "missedPerWeek": 5, "jobValue": 1200, "closeRate": 50, "recoverRate": 60 },
+  "calculatorDefaults": {
+    "missedPerWeek": 5,
+    "jobValue": 1200,
+    "closeRate": 50,
+    "recoverRate": 60
+  },
   "industries": [
     {
       "slug": "tree-service",
@@ -115,17 +134,45 @@
       "description": "Boomerang texts back every missed call, asks about tree size, structures and power lines, flags storm emergencies, and books the estimate while your crew is in the tree.",
       "hook": "Every missed tree call is an $800 to $2,500 job you didn’t get.",
       "pain": "You can’t answer a phone with a running saw. Storm weeks bring the most calls exactly when you’re busiest, and the homeowner with a limb on the roof calls the next company on Google.",
-      "questions": ["What do you need done, removal, trimming or stump grinding?", "Roughly how tall is it, and is it near the house, a fence or power lines?", "What’s the property address, including city and ZIP?"],
+      "questions": [
+        "What do you need done, removal, trimming or stump grinding?",
+        "Roughly how tall is it, and is it near the house, a fence or power lines?",
+        "What’s the property address, including city and ZIP?"
+      ],
       "emergency": "A tree just came down on our roof!",
       "chat": [
-        ["in", "Hi, I need a quote to take down a big pine in my backyard"],
-        ["out", "Hi, this is Sara with Arbor View Tree Care. Sorry we missed your call! Happy to help with that. Roughly how tall is the pine, and is it close to the house or power lines?"],
-        ["in", "Maybe 60 ft. It leans toward the garage"],
-        ["out", "Got it. May I have your property address, including city and ZIP?"],
-        ["in", "1420 Maple Ct, Springfield 62704"],
-        ["out", "Perfect, thanks! I have Thursday at 3:00 PM or Friday at 10:00 AM for an on-site estimate. Which works better?"],
-        ["in", "Thursday"],
-        ["out", "You’re all set for Thursday at 3:00 PM. We’ll see you then!"]
+        [
+          "in",
+          "Hi, I need a quote to take down a big pine in my backyard"
+        ],
+        [
+          "out",
+          "Hi, this is Sara with Arbor View Tree Care. Sorry we missed your call! Happy to help with that. Roughly how tall is the pine, and is it close to the house or power lines?"
+        ],
+        [
+          "in",
+          "Maybe 60 ft. It leans toward the garage"
+        ],
+        [
+          "out",
+          "Got it. May I have your property address, including city and ZIP?"
+        ],
+        [
+          "in",
+          "1420 Maple Ct, Springfield 62704"
+        ],
+        [
+          "out",
+          "Perfect, thanks! I have Thursday at 3:00 PM or Friday at 10:00 AM for an on-site estimate. Which works better?"
+        ],
+        [
+          "in",
+          "Thursday"
+        ],
+        [
+          "out",
+          "You’re all set for Thursday at 3:00 PM. We’ll see you then!"
+        ]
       ]
     },
     {
@@ -139,17 +186,45 @@
       "description": "Boomerang texts back missed calls while you mow, qualifies the property and service, checks your service area, and books the estimate. Built and run on a real lawn care business.",
       "hook": "Every call that rings out while you’re on a mower is a season of mowing you didn’t sell.",
       "pain": "Spring is when every homeowner calls at once, and it’s exactly when you’re behind the handlebars from sunup to sundown. Voicemail fills up and the callers book whoever answers first.",
-      "questions": ["Which service do you need, mowing, aeration, overseeding or cleanup?", "How often, weekly, every other week or one time?", "What’s the property address, including city and ZIP?"],
+      "questions": [
+        "Which service do you need, mowing, aeration, overseeding or cleanup?",
+        "How often, weekly, every other week or one time?",
+        "What’s the property address, including city and ZIP?"
+      ],
       "emergency": null,
       "chat": [
-        ["in", "Do you guys do aeration?"],
-        ["out", "Hi, this is Sara with The Sod Squad. Sorry we missed your call! Yes, we do aeration. May I have your property address, including city and ZIP?"],
-        ["in", "88 Birch Ln, Fairview 37062"],
-        ["out", "Great. Would you like to add overseeding while we’re there, or just aeration?"],
-        ["in", "Both"],
-        ["out", "Perfect, thanks! I can have someone out Tuesday at 4:00 PM or Wednesday at 5:00 PM to take a look. Which works?"],
-        ["in", "Wednesday"],
-        ["out", "You’re booked for Wednesday at 5:00 PM. See you then!"]
+        [
+          "in",
+          "Do you guys do aeration?"
+        ],
+        [
+          "out",
+          "Hi, this is Sara with The Sod Squad. Sorry we missed your call! Yes, we do aeration. May I have your property address, including city and ZIP?"
+        ],
+        [
+          "in",
+          "88 Birch Ln, Fairview 37062"
+        ],
+        [
+          "out",
+          "Great. Would you like to add overseeding while we’re there, or just aeration?"
+        ],
+        [
+          "in",
+          "Both"
+        ],
+        [
+          "out",
+          "Perfect, thanks! I can have someone out Tuesday at 4:00 PM or Wednesday at 5:00 PM to take a look. Which works?"
+        ],
+        [
+          "in",
+          "Wednesday"
+        ],
+        [
+          "out",
+          "You’re booked for Wednesday at 5:00 PM. See you then!"
+        ]
       ]
     },
     {
@@ -163,17 +238,45 @@
       "description": "Boomerang texts back missed calls, gathers the project scope, address and timeline, and books the design consult or estimate. Big-ticket leads never sit in voicemail.",
       "hook": "One missed patio call can be a $5,000 job. Most callers won’t leave a voicemail.",
       "pain": "When you’re setting pavers or running a skid steer, the phone is in the truck. The homeowner planning a backyard project calls three companies and goes with the first one that gets back to them.",
-      "questions": ["What kind of project, planting, patio, retaining wall or full design?", "Rough timeline, this season or next?", "What’s the property address, including city and ZIP?"],
+      "questions": [
+        "What kind of project, planting, patio, retaining wall or full design?",
+        "Rough timeline, this season or next?",
+        "What’s the property address, including city and ZIP?"
+      ],
       "emergency": null,
       "chat": [
-        ["in", "Looking to get a paver patio put in this spring"],
-        ["out", "Hi, this is Sara with Greenline Landscapes. Sorry we missed your call! A patio sounds great. Roughly how big are you thinking?"],
-        ["in", "Maybe 20x20 off the back door"],
-        ["out", "Got it. May I have your property address, including city and ZIP?"],
-        ["in", "512 Oak Ridge Dr, Franklin 37064"],
-        ["out", "Thanks! I can set up a consult Monday at 9:00 AM or Tuesday at 2:00 PM. Which works?"],
-        ["in", "Monday works"],
-        ["out", "You’re set for Monday at 9:00 AM. Talk soon!"]
+        [
+          "in",
+          "Looking to get a paver patio put in this spring"
+        ],
+        [
+          "out",
+          "Hi, this is Sara with Greenline Landscapes. Sorry we missed your call! A patio sounds great. Roughly how big are you thinking?"
+        ],
+        [
+          "in",
+          "Maybe 20x20 off the back door"
+        ],
+        [
+          "out",
+          "Got it. May I have your property address, including city and ZIP?"
+        ],
+        [
+          "in",
+          "512 Oak Ridge Dr, Franklin 37064"
+        ],
+        [
+          "out",
+          "Thanks! I can set up a consult Monday at 9:00 AM or Tuesday at 2:00 PM. Which works?"
+        ],
+        [
+          "in",
+          "Monday works"
+        ],
+        [
+          "out",
+          "You’re set for Monday at 9:00 AM. Talk soon!"
+        ]
       ]
     },
     {
@@ -187,17 +290,45 @@
       "description": "Boomerang texts back calls you miss while you’re on a wand, asks what surfaces need cleaning and the address, and books the quote so you can keep working.",
       "hook": "You can’t hear the phone over a surface cleaner, and your callers won’t wait.",
       "pain": "Most pressure washing calls are impulse calls. The homeowner sees a dirty driveway, searches, and calls down the list until someone answers. If it isn’t you, it’s a competitor.",
-      "questions": ["What needs cleaning, house, driveway, deck, roof or fence?", "Is it a one-story or two-story home?", "What’s the property address, including city and ZIP?"],
+      "questions": [
+        "What needs cleaning, house, driveway, deck, roof or fence?",
+        "Is it a one-story or two-story home?",
+        "What’s the property address, including city and ZIP?"
+      ],
       "emergency": null,
       "chat": [
-        ["in", "How much to wash my house and driveway?"],
-        ["out", "Hi, this is Sara with Bright Side Exterior Cleaning. Sorry we missed your call! Happy to get you a quote. Is it a one-story or two-story home?"],
-        ["in", "Two story"],
-        ["out", "Got it. May I have your property address, including city and ZIP?"],
-        ["in", "77 Sunset Blvd, Greenville 29601"],
-        ["out", "Perfect, thanks! I can have someone stop by Thursday at 11:00 AM or Friday at 1:00 PM for a quick quote. Which works?"],
-        ["in", "Friday"],
-        ["out", "You’re all set for Friday at 1:00 PM!"]
+        [
+          "in",
+          "How much to wash my house and driveway?"
+        ],
+        [
+          "out",
+          "Hi, this is Sara with Bright Side Exterior Cleaning. Sorry we missed your call! Happy to get you a quote. Is it a one-story or two-story home?"
+        ],
+        [
+          "in",
+          "Two story"
+        ],
+        [
+          "out",
+          "Got it. May I have your property address, including city and ZIP?"
+        ],
+        [
+          "in",
+          "77 Sunset Blvd, Greenville 29601"
+        ],
+        [
+          "out",
+          "Perfect, thanks! I can have someone stop by Thursday at 11:00 AM or Friday at 1:00 PM for a quick quote. Which works?"
+        ],
+        [
+          "in",
+          "Friday"
+        ],
+        [
+          "out",
+          "You’re all set for Friday at 1:00 PM!"
+        ]
       ]
     },
     {
@@ -211,17 +342,45 @@
       "description": "Boomerang texts back missed calls, identifies the pest problem and urgency, checks your service area, and books the inspection. Recurring-revenue customers stop slipping away.",
       "hook": "A homeowner who just saw a mouse isn’t leaving a voicemail. They’re calling the next number.",
       "pain": "Pest calls are urgent and emotional. When techs are in crawl spaces and attics, calls go unanswered, and every one of those callers could have been a recurring quarterly customer.",
-      "questions": ["What are you seeing, ants, rodents, spiders, wasps or something else?", "Where, inside the home, outside, or both?", "What’s the property address, including city and ZIP?"],
+      "questions": [
+        "What are you seeing, ants, rodents, spiders, wasps or something else?",
+        "Where, inside the home, outside, or both?",
+        "What’s the property address, including city and ZIP?"
+      ],
       "emergency": null,
       "chat": [
-        ["in", "We have mice in the garage, can someone come out?"],
-        ["out", "Hi, this is Sara with Bug Busters Pest Control. Sorry we missed your call! We can help with that. Are you seeing signs inside the house too, or just the garage?"],
-        ["in", "Just the garage so far"],
-        ["out", "Got it. May I have your property address, including city and ZIP?"],
-        ["in", "301 Elm St, Columbia 65201"],
-        ["out", "Thanks! I can get a tech out tomorrow at 10:00 AM or 2:00 PM for an inspection. Which works?"],
-        ["in", "10"],
-        ["out", "You’re booked for tomorrow at 10:00 AM. We’ll see you then!"]
+        [
+          "in",
+          "We have mice in the garage, can someone come out?"
+        ],
+        [
+          "out",
+          "Hi, this is Sara with Bug Busters Pest Control. Sorry we missed your call! We can help with that. Are you seeing signs inside the house too, or just the garage?"
+        ],
+        [
+          "in",
+          "Just the garage so far"
+        ],
+        [
+          "out",
+          "Got it. May I have your property address, including city and ZIP?"
+        ],
+        [
+          "in",
+          "301 Elm St, Columbia 65201"
+        ],
+        [
+          "out",
+          "Thanks! I can get a tech out tomorrow at 10:00 AM or 2:00 PM for an inspection. Which works?"
+        ],
+        [
+          "in",
+          "10"
+        ],
+        [
+          "out",
+          "You’re booked for tomorrow at 10:00 AM. We’ll see you then!"
+        ]
       ]
     },
     {
@@ -235,17 +394,45 @@
       "description": "Boomerang texts back every missed roofing call, gathers the problem, roof type and address, flags active leaks as emergencies, and books the inspection.",
       "hook": "A single missed roof replacement call can cost you five figures.",
       "pain": "After a storm, every homeowner on the block is calling. You’re on a roof, your office line is ringing out, and the first roofer to respond gets the inspection, and usually the job.",
-      "questions": ["Is this a leak, storm damage, or a replacement estimate?", "Do you know roughly how old the roof is?", "What’s the property address, including city and ZIP?"],
+      "questions": [
+        "Is this a leak, storm damage, or a replacement estimate?",
+        "Do you know roughly how old the roof is?",
+        "What’s the property address, including city and ZIP?"
+      ],
       "emergency": "Water is coming through our ceiling right now!",
       "chat": [
-        ["in", "Hail last night, I think we have roof damage"],
-        ["out", "Hi, this is Sara with Summit Roofing. Sorry we missed your call! Sorry to hear that. Is water coming inside right now, or is it damage you can see from outside?"],
-        ["in", "No leak, just missing shingles"],
-        ["out", "Got it. May I have your property address, including city and ZIP?"],
-        ["in", "9 Ridgeview Rd, Norman 73071"],
-        ["out", "Thanks! I can get an inspector out Wednesday at 8:00 AM or 3:00 PM. Which works?"],
-        ["in", "3"],
-        ["out", "You’re set for Wednesday at 3:00 PM!"]
+        [
+          "in",
+          "Hail last night, I think we have roof damage"
+        ],
+        [
+          "out",
+          "Hi, this is Sara with Summit Roofing. Sorry we missed your call! Sorry to hear that. Is water coming inside right now, or is it damage you can see from outside?"
+        ],
+        [
+          "in",
+          "No leak, just missing shingles"
+        ],
+        [
+          "out",
+          "Got it. May I have your property address, including city and ZIP?"
+        ],
+        [
+          "in",
+          "9 Ridgeview Rd, Norman 73071"
+        ],
+        [
+          "out",
+          "Thanks! I can get an inspector out Wednesday at 8:00 AM or 3:00 PM. Which works?"
+        ],
+        [
+          "in",
+          "3"
+        ],
+        [
+          "out",
+          "You’re set for Wednesday at 3:00 PM!"
+        ]
       ]
     }
   ]
