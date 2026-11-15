@@ -27,7 +27,6 @@ function nav() {
     <li><a href="/missed-call-calculator/">Calculator</a></li>
     <li><a href="/pricing/">Pricing</a></li>
     <li><a href="/missed-call-statistics/">Missed-call stats</a></li>
-    <li><a href="${C.appUrl}">Log in</a></li>
     <li><a class="btn btn-primary" href="${C.signupUrl}">Start free trial</a></li>
   </ul>
 </div></header>`;
