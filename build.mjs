@@ -196,7 +196,7 @@ const FAQ = [
   ['How long does setup take?', `Our part takes about a day. Texting goes live once the carriers approve your business for business texting (A2P registration), which usually takes a few days to two weeks. We handle the paperwork, and your free trial doesn’t start until texting is live.`],
   ['What is the setup fee for?', `The one-time ${money(fee)} covers your carrier texting registration, your local Boomerang number and onboarding. It’s non-refundable because the registration work happens right away.`],
   ['Is there a contract?', 'No. Month to month (or yearly if you want two months free). Cancel in one click from Settings → Manage billing.'],
-  ['What kinds of businesses use Boomerang?', 'Owner-operated home service businesses: tree service, lawn care, landscaping, pressure washing, pest control, roofing and other trades where the owner is on a job when the phone rings.'],
+  ['What kinds of businesses use Boomerang?', 'Owner-operated home service businesses: tree service, garage door repair, roofing, landscaping and hardscaping, pressure washing, pest control and other trades where the owner is on a job when the phone rings.'],
 ];
 function faqBlock(qs = FAQ) {
   return `<div class="faq">${qs.map(([q, a]) => `<details><summary>${esc(q)}</summary><p>${esc(a)}</p></details>`).join('')}</div>`;
@@ -427,7 +427,7 @@ writeFileSync(join(OUT, '404.html'), layout({ path: '/404', title: 'Page not fou
 writeFileSync(join(OUT, 'sitemap.xml'), `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${pages.map((p) => `  <url><loc>${C.siteUrl}${p}</loc><lastmod>${TODAY}</lastmod></url>`).join('\n')}\n</urlset>\n`);
 writeFileSync(join(OUT, 'robots.txt'), `User-agent: *\nAllow: /\n\nSitemap: ${C.siteUrl}/sitemap.xml\n`);
 writeFileSync(join(OUT, '_headers'), `/*\n  X-Content-Type-Options: nosniff\n  Referrer-Policy: strict-origin-when-cross-origin\n  X-Frame-Options: SAMEORIGIN\n/assets/*\n  Cache-Control: public, max-age=86400\n`);
-writeFileSync(join(OUT, '_redirects'), `/calculator /missed-call-calculator/ 301\n/stats /missed-call-statistics/ 301\n`);
+writeFileSync(join(OUT, '_redirects'), `/calculator /missed-call-calculator/ 301\n/stats /missed-call-statistics/ 301\n/industries/lawn-care /industries/landscaping/ 301\n/industries/lawn-care/ /industries/landscaping/ 301\n`);
 cpSync('src/assets', join(OUT, 'assets'), { recursive: true });
 cpSync('public', OUT, { recursive: true });
 console.log(`Built ${pages.length} pages into ./${OUT}`);

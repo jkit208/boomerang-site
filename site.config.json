@@ -176,70 +176,122 @@
       ]
     },
     {
-      "slug": "lawn-care",
-      "name": "Lawn Care",
-      "plural": "lawn care companies",
-      "job": "lawn care",
-      "jobValue": 600,
+      "slug": "garage-door-repair",
+      "name": "Garage Door Repair",
+      "plural": "garage door companies",
+      "job": "garage door",
+      "jobValue": 650,
       "missedPerWeek": 6,
-      "title": "Missed Call Text Back for Lawn Care Companies",
-      "description": "Boomerang texts back missed calls while you mow, qualifies the property and service, checks your service area, and books the estimate. Built and run on a real lawn care business.",
-      "hook": "Every call that rings out while you’re on a mower is a season of mowing you didn’t sell.",
-      "pain": "Spring is when every homeowner calls at once, and it’s exactly when you’re behind the handlebars from sunup to sundown. Voicemail fills up and the callers book whoever answers first.",
+      "title": "Missed Call Text Back for Garage Door Repair Companies",
+      "description": "Boomerang texts back every missed garage door call in seconds, finds out if the door is stuck or the spring is broken, flags emergencies, and books the service call while you’re on a ladder.",
+      "hook": "A broken spring at 7 AM is a customer who can’t get to work. They’re calling until someone answers.",
+      "pain": "Garage door calls are urgent: a car trapped inside, a door that won’t close at night. When you’re mid-install with both hands on a torsion bar, the call rings out, and the homeowner books the next company in the search results.",
       "questions": [
-        "Which service do you need, mowing, aeration, overseeding or cleanup?",
-        "How often, weekly, every other week or one time?",
+        "What’s going on, broken spring, door off track, opener, or a new door?",
+        "Is the door stuck open or closed right now?",
         "What’s the property address, including city and ZIP?"
       ],
-      "emergency": null,
+      "emergency": "Our garage door is stuck open and we can’t close it for the night!",
       "chat": [
         [
           "in",
-          "Do you guys do aeration?"
+          "Spring snapped on our garage door, car is stuck inside"
         ],
         [
           "out",
-          "Hi, this is Sara with The Sod Squad. Sorry we missed your call! Yes, we do aeration. May I have your property address, including city and ZIP?"
+          "Hi, this is Sara with Liftline Garage Doors. Sorry we missed your call! That’s no fun. Is it a single or double door, and is it stuck closed right now?"
         ],
         [
           "in",
-          "88 Birch Ln, Fairview 37062"
+          "Double door, stuck closed"
         ],
         [
           "out",
-          "Great. Would you like to add overseeding while we’re there, or just aeration?"
+          "Got it. May I have your property address, including city and ZIP?"
         ],
         [
           "in",
-          "Both"
+          "2210 Harbor Way, Mesa 85201"
         ],
         [
           "out",
-          "Perfect, thanks! I can have someone out Tuesday at 4:00 PM or Wednesday at 5:00 PM to take a look. Which works?"
+          "Perfect, thanks! I can get a tech out today at 2:00 PM or 4:30 PM. Which works?"
         ],
         [
           "in",
-          "Wednesday"
+          "2"
         ],
         [
           "out",
-          "You’re booked for Wednesday at 5:00 PM. See you then!"
+          "You’re booked for today at 2:00 PM. We’ll see you then!"
+        ]
+      ]
+    },
+    {
+      "slug": "roofing",
+      "name": "Roofing",
+      "plural": "roofing contractors",
+      "job": "roofing job",
+      "jobValue": 8000,
+      "missedPerWeek": 3,
+      "title": "Missed Call Text Back for Roofing Contractors",
+      "description": "Boomerang texts back every missed roofing call, gathers the problem, roof type and address, flags active leaks as emergencies, and books the inspection.",
+      "hook": "A single missed roof replacement call can cost you five figures.",
+      "pain": "After a storm, every homeowner on the block is calling. You’re on a roof, your office line is ringing out, and the first roofer to respond gets the inspection, and usually the job.",
+      "questions": [
+        "Is this a leak, storm damage, or a replacement estimate?",
+        "Do you know roughly how old the roof is?",
+        "What’s the property address, including city and ZIP?"
+      ],
+      "emergency": "Water is coming through our ceiling right now!",
+      "chat": [
+        [
+          "in",
+          "Hail last night, I think we have roof damage"
+        ],
+        [
+          "out",
+          "Hi, this is Sara with Summit Roofing. Sorry we missed your call! Sorry to hear that. Is water coming inside right now, or is it damage you can see from outside?"
+        ],
+        [
+          "in",
+          "No leak, just missing shingles"
+        ],
+        [
+          "out",
+          "Got it. May I have your property address, including city and ZIP?"
+        ],
+        [
+          "in",
+          "9 Ridgeview Rd, Norman 73071"
+        ],
+        [
+          "out",
+          "Thanks! I can get an inspector out Wednesday at 8:00 AM or 3:00 PM. Which works?"
+        ],
+        [
+          "in",
+          "3"
+        ],
+        [
+          "out",
+          "You’re set for Wednesday at 3:00 PM!"
         ]
       ]
     },
     {
       "slug": "landscaping",
-      "name": "Landscaping",
-      "plural": "landscaping companies",
-      "job": "landscaping project",
+      "name": "Landscaping, Hardscaping & Lawn Care",
+      "plural": "landscapers, hardscapers and lawn care companies",
+      "job": "landscaping or hardscaping",
       "jobValue": 3500,
       "missedPerWeek": 4,
-      "title": "Missed Call Text Back for Landscapers and Hardscapers",
-      "description": "Boomerang texts back missed calls, gathers the project scope, address and timeline, and books the design consult or estimate. Big-ticket leads never sit in voicemail.",
-      "hook": "One missed patio call can be a $5,000 job. Most callers won’t leave a voicemail.",
-      "pain": "When you’re setting pavers or running a skid steer, the phone is in the truck. The homeowner planning a backyard project calls three companies and goes with the first one that gets back to them.",
+      "title": "Missed Call Text Back for Landscaping, Hardscaping & Lawn Care",
+      "description": "Boomerang texts back missed calls while you're running a skid steer or a mower, gathers the project scope and address, and books the consult or estimate. Built and run on a real lawn care business.",
+      "hook": "One missed patio call can be a $10,000 job. Most callers won’t leave a voicemail.",
+      "pain": "When you’re setting pavers, running a skid steer or behind a mower, the phone is in the truck. The homeowner planning a backyard project calls three companies and goes with the first one that gets back to them. We know, because we built Boomerang on our own lawn care business for exactly this reason.",
       "questions": [
-        "What kind of project, planting, patio, retaining wall or full design?",
+        "What kind of project, patio, retaining wall, planting, sod or ongoing lawn care?",
         "Rough timeline, this season or next?",
         "What’s the property address, including city and ZIP?"
       ],
@@ -380,58 +432,6 @@
         [
           "out",
           "You’re booked for tomorrow at 10:00 AM. We’ll see you then!"
-        ]
-      ]
-    },
-    {
-      "slug": "roofing",
-      "name": "Roofing",
-      "plural": "roofing contractors",
-      "job": "roofing job",
-      "jobValue": 8000,
-      "missedPerWeek": 3,
-      "title": "Missed Call Text Back for Roofing Contractors",
-      "description": "Boomerang texts back every missed roofing call, gathers the problem, roof type and address, flags active leaks as emergencies, and books the inspection.",
-      "hook": "A single missed roof replacement call can cost you five figures.",
-      "pain": "After a storm, every homeowner on the block is calling. You’re on a roof, your office line is ringing out, and the first roofer to respond gets the inspection, and usually the job.",
-      "questions": [
-        "Is this a leak, storm damage, or a replacement estimate?",
-        "Do you know roughly how old the roof is?",
-        "What’s the property address, including city and ZIP?"
-      ],
-      "emergency": "Water is coming through our ceiling right now!",
-      "chat": [
-        [
-          "in",
-          "Hail last night, I think we have roof damage"
-        ],
-        [
-          "out",
-          "Hi, this is Sara with Summit Roofing. Sorry we missed your call! Sorry to hear that. Is water coming inside right now, or is it damage you can see from outside?"
-        ],
-        [
-          "in",
-          "No leak, just missing shingles"
-        ],
-        [
-          "out",
-          "Got it. May I have your property address, including city and ZIP?"
-        ],
-        [
-          "in",
-          "9 Ridgeview Rd, Norman 73071"
-        ],
-        [
-          "out",
-          "Thanks! I can get an inspector out Wednesday at 8:00 AM or 3:00 PM. Which works?"
-        ],
-        [
-          "in",
-          "3"
-        ],
-        [
-          "out",
-          "You’re set for Wednesday at 3:00 PM!"
         ]
       ]
     }
